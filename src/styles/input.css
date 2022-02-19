@@ -1,0 +1,22 @@
+input,
+textarea {
+  font-size: 1rem;
+  color: black;
+  padding-left: 1rem;
+  display: block;
+  border-radius: 5px;
+  border: 0.5px solid rgb(190, 198, 223);
+}
+input{
+  height: 2rem;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 0.5px solid rgb(190, 198, 223);
+}
+.label {
+  margin-bottom: 7px;
+  display: block;
+  font-weight: bold;
+}

@@ -1,0 +1,30 @@
+.modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+}
+
+.modal-body {
+  position: absolute;
+  width: 600px;
+ 
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.close-icon {
+  text-align: end;
+}
+.close-icon svg {
+  font-size: 19px;
+  cursor: pointer;
+}

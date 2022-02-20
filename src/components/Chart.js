@@ -23,7 +23,6 @@ const MyChart = () => {
   useEffect(() => {
     // extract all years
     if (response) {
-      console.log("here");
       const years = response?.resource?.awards?.map((item) => item.year);
       // count the number of times a year occurs, storing them in key(year) value(count) pair
       const yearsObj = years?.reduce(function (obj, b) {
@@ -79,9 +78,7 @@ const MyChart = () => {
     return <div>An error occurred while fetching the posts</div>;
   }
 
-  return (
-    <div>{userData.labels.length > 0 && <BarChart chartData={userData} />}</div>
-  );
+  return <>{userData.labels.length > 0 && <BarChart chartData={userData} />}</>;
 };
 
 export default MyChart;

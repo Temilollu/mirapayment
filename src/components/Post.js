@@ -157,7 +157,7 @@ const Post = ({ post, index, setData }) => {
               onClick={handleDelete}
             >
               {" "}
-              {isLoading ? "Loading..." : " Delete"}
+              {isLoading ? "Loading..." : "Delete"}
             </button>
           </div>
         </Modal>

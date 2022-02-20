@@ -22,21 +22,9 @@ const Home = () => {
 
   useEffect(() => {
     if (response) {
-      setData(response?.slice(0, 20));
+      setData(response?.slice(0, 10));
     }
   }, [response]);
-
-  if (isLoading) {
-    return (
-      <div className="loading">
-        <img src={loadingImg} alt="loading" />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <div>An error occurred while fetching the posts</div>;
-  }
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -80,7 +68,7 @@ const Home = () => {
           progress: undefined,
         });
       })
-      .catch((eror) => {
+      .catch(() => {
         setLoading(false);
 
         toast.error("An error occcured", {
@@ -102,6 +90,19 @@ const Home = () => {
       body: "",
     });
   };
+
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <img src={loadingImg} alt="loading" />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div>An error occurred while fetching the posts</div>;
+  }
+
   return (
     <div className="container">
       <div className="heading-container">
@@ -141,7 +142,9 @@ const Home = () => {
           </form>
         </Modal>
       )}
-      <Chart />
+      <div className="chart-container">
+        <Chart />
+      </div>
     </div>
   );
 };
